@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     // Build the React app
-                    sh 'npm run build'
+                    sh 'npm run start'
                 }
             }
         }
