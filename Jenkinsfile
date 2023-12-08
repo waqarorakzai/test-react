@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                    def tools = tool 'NodeJs21'
-                    sh "ls -la ${tools}"
+                    sh "ls -la ${tools}/bin"
                 }
             }
         }
