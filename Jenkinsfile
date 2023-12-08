@@ -6,9 +6,11 @@ pipeline {
             steps {
                 script {
                    def tools = tool 'NodeJs21'
+                    def nodeBin = "${tools}/bin/node"
+                    def npmBin = "${tools}/bin/npm"
                     echo "Node.js Home: ${tools}"
-                    sh "${tools}/bin/node --version"
-                    sh "${tools}/bin/npm --version"
+                    sh "${nodeBin} --version"
+                    sh "${npmBin} --version"
                 }
             }
         }
