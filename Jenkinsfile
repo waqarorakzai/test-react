@@ -4,10 +4,22 @@ pipeline {
   tools {nodejs "NodeJs21"}
  
   stages {
-    stage('Example') {
+    stage('Test NPM') {
       steps {
         sh 'npm config ls'
       }
     }
+
+    stage('Install dependencies') {
+      steps {
+        sh 'npm install'
+      }
+    }
+     
+    stage('Test') {
+      steps {
+         sh 'npm start'
+      }
+    }     
   }
 }
